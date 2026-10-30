@@ -149,5 +149,5 @@ func factorialResult(ctx context.Context, operand float64) (float64, error) {
 
 	result, err := Factorial(ctx, int(operand))
 
-	return float64(result), err
+	return result, err
 }

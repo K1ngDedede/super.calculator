@@ -60,7 +60,7 @@ func TestFactorial(t *testing.T) {
 	tests := []struct {
 		name     string
 		input    int
-		expected int
+		expected float64
 		wantErr  error
 	}{
 		{name: "positive", input: 5, expected: 120},

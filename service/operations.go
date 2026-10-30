@@ -45,19 +45,20 @@ func SquareRoot(a float64) (float64, error) {
 	return math.Sqrt(a), nil
 }
 
-func Factorial(ctx context.Context, n int) (int, error) {
+func Factorial(ctx context.Context, n int) (float64, error) {
 	if n < 0 {
 		return 0, fmt.Errorf("cannot compute factorial of a negative number")
 	}
 
-	value := 1
+	value := 1.0
 
 	for i := range n {
 		if err := ctx.Err(); err != nil {
 			return 0, err
 		}
 
-		value *= (i + 1)
+		ifloat := float64(i + 1)
+		value *= ifloat
 	}
 
 	return value, nil
